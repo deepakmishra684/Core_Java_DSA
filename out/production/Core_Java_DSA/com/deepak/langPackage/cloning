@@ -1,0 +1,8 @@
+Question:- What is cloning?
+Ans:- The process of creating dublicate copy of an existing Object is known as Cloning.
+      This cloning process is performed with the support of clone() available from Object class.
+      And this cloning process is monitor by Cloneable Interface.
+      
+There are two type of cloning.
+1:-  Shallow Cloning:- 
+     
