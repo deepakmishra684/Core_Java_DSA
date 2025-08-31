@@ -20,6 +20,6 @@ public class MissingNumberFinder {
 		int[] arr = { 1, 2, 4, 5 }; // n = 5
 
 		int missing = findMissingNumber(arr);
-		System.out.println("Missing number is: " + missing);
+		System.out.println("Hey User the Missing number is: " + missing);
 	}
 }
