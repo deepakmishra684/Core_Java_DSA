@@ -19,9 +19,9 @@ public class CheckFibonacci {
 		int[] input = { 0, 1, 1, 2, 3, 5, 8 }; // Try changing this array
 
 		if (isFibonacciSequence(input)) {
-			System.out.println("The array is a Fibonacci sequence.");
+			System.out.println("The array is a Fibonacci sequence.......");
 		} else {
-			System.out.println("The array is NOT a Fibonacci sequence.");
+			System.out.println("The array is NOT a Fibonacci sequence......");
 		}
 	}
 }

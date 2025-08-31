@@ -1,0 +1,35 @@
+Case 1: Overriding both equals(Object) and hashCode() method
+******************************************************************************
+You must override hashCode() in every class that overrides equals(). Failure to do so will result in a 
+violation of the general contract for Object.hashCode(), which will prevent your class from functioning 
+properly in conjunction with all hash-based collections, including HashMap, HashSet, and Hashtable.
+Here is the contract, from the java.lang.Object specialization:
+
+1:-  Whenever it(hashcode) is invoked on the same object more than once during an execution of a Java 
+application, the hashCode method must consistently return the same integer, provided no information used 
+in equals comparisons on the object is modified. This integer need not remain consistent from one execution
+ of an application to another execution of the same application.
+2:-  If two objects are equal according to the equals(Object) method, then calling the hashCode method on each 
+of the two objects must produce the same integer result.
+3:-  It is not required that if two objects are unequal according to the equals(java.lang.Object) method,
+then calling the hashCode method on each of the two objects must produce distinct integer results.
+However, the programmer should be aware that producing distinct integer results for unequal objects may
+improve the performance of hashtables.
+   
+Case 2 : Overriding only the equals(Object) method
+***************************************************************************************************
+Employee emp1 = new Employee(1, " Ankit", "Singh", 5000);
+Employee emp2 = new Employee(1, "Ankit", "Singh", 5000);
+If we only override equals(Object) method, when we call map.put(emp1,"Deepak"); it will hash to some bucket
+location and when we call map.put(emp2,"Deepak"); it will hash to some other bucket location because of different 
+hashcode value as hashCode() method has not been overridden.
+
+Case 3: Overriding only hashCode() method
+*******************************************************************************************************
+When we call map.put(emp1,"Deepak"); it will generate hashcode value and stores it to the bucket location that is
+specified with this address (hashcode value). And when we call map.put(emp2,"Deepak"); it generates same hashcode
+value as previous entry since key objects are same and hashCode() method has been overridden. So it should
+replace first with second as per rule. But it didn’t. Reason is, when it iterate through that bucket and 
+seeks to find k such that k.equals(1) i.e. if searching key already exist. But it fails to find because
+equals(Object ) method has not been overridden. It is violation of rule of hashing.
+
