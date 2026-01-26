@@ -1,0 +1,12 @@
+--------Types of sorting-----------
+1:- Selection Sort:- Time Complexity- O(n2)
+2:- Bubble Sort:- Time Complexity- O(n2)
+3:- Insertion Sort:- Time Complexity- O(n2)
+4:- Merge Sort:- Time Complexity-  O(n log n)
+5:- Quick Sort:- Time Complexity- 
+6:- Heap Sort:- Time Complexity- 
+------------------------Sort Form--------------
+                 SBI MQH
+-------------------------------------------------
+----- Definition-----
+Sorting is arranging the elements in a array or list in increasing or decreasing order.

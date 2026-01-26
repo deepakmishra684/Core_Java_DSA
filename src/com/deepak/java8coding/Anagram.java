@@ -23,9 +23,9 @@ public class Anagram {
 		System.out.println("str1:" + str1);
 		System.out.println("str2:" + str2);
 		if (str1.equals(str2))
-			return "String is Anagram";
+			return "Hey man --> String is Anagram";
 		else
-			return "String is not Anagram";
+			return "Hi there -->String is not Anagram";
 
 	}
 
